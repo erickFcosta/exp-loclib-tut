@@ -8,12 +8,13 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var usersCoolRouteur = require('./routes/cool');
+var wiki = require('./routes/wiki');
 
 var app = express();
 
 // set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = "****";
+var mongoDB = "mongodb+srv://localLibraryUser:ja22@cluster0.aapnj.mongodb.net/local_library?retryWrites=true&w=majority";
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/users/cool', usersCoolRouteur);
+app.use('/wiki', wiki);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
