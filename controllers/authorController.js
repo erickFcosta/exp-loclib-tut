@@ -5,12 +5,31 @@ exports.author_list = function(req, res) {
   res.send('NOT IMPLEMENTED: Author list');
 };
 
-// TODO: author_detail + (req.params.id)
+// author_detail + (req.params.id)
 exports.author_detail = function (req, res) {
   res.send('NOT IMPLEMENTED: author detail' + req.params.id);
 };
-// TODO: author_create (get and post)
 
-// TODO: author_delete (get and post)
+// author_create (get and post)
+exports.author_create_get = function (req, res) {
+  res.send('NOT IMPLEMENTED: author create GET');
+};
+exports.author_create_post = function (req, res) {
+  res.send('NOT IMPLEMENTED: author create POST');
+};
 
-// TODO: author_update (get and post)
+// author_delete (get and post)
+exports.author_delete_get = function (req, res) {
+  res.send('NOT IMPLEMENTED: author delete GET');
+};
+exports.author_delete_post = function (req, res) {
+  res.send('NOT IMPLEMENTED: author delete POST');
+};
+
+// author_update (get and post)
+exports.author_update_get = function (req, res) {
+  res.send('NOT IMPLEMENTED: author update GET');
+};
+exports.author_update_post = function (req, res) {
+  res.send('NOT IMPLEMENTED: author update POST');
+};
