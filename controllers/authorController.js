@@ -6,7 +6,9 @@ exports.author_list = function(req, res) {
 };
 
 // TODO: author_detail + (req.params.id)
-
+exports.author_detail = function (req, res) {
+  res.send('NOT IMPLEMENTED: author detail' + req.params.id);
+};
 // TODO: author_create (get and post)
 
 // TODO: author_delete (get and post)
