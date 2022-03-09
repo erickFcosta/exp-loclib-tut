@@ -9,7 +9,7 @@ let genreCtrl = require("../controllers/genreController");
 
 // book main routers
 router.get('/', bookCtrl.index);
-router.get('/book', bookCtrl.book_list);
+/*router.get('/book', bookCtrl.book_list);
 router.get('/book/:id', bookCtrl.book_detail);
 // get and post book
 router.get('/book/create', bookCtrl.book_create_get);
@@ -19,7 +19,7 @@ router.get('/book/:id/update/', bookCtrl.book_update_get);
 router.post('/book/:id/update/', bookCtrl.book_update_post);
 
 router.get('/book/:id/delete/', bookCtrl.book_delete_get);
-router.post('/book/:id/delete/', bookCtrl.book_delete_post);
+router.post('/book/:id/delete/', bookCtrl.book_delete_post);*/
 
 // author main routers
 router.get('/author', authorCtrl.author_list);
