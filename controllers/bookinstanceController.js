@@ -1,7 +1,7 @@
 var BookInstance = require( "../models/bookinstance" );
 
 // bookinstance_list
-exports.bookinstance_list = function (req, res) {
+/*exports.bookinstance_list = function (req, res) {
   res.send('NOT IMPLEMENTED: bookinstance list')
 }
 
@@ -32,4 +32,15 @@ exports.bookinstance_update_get = function (req, res) {
 }
 exports.bookinstance_update_post = function (req, res) {
   res.send('NOT IMPLEMENTED: bookinstance update POST')
-}
+}*/
+
+exports.bookinstance_list = function(req, res, next) {
+
+  BookInstance.find()
+    .populate('book')
+    .exec(function (err, list_bookinstances) {
+      if (err) { return next(err)};
+      // Successful, so render
+      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+    });
+};
