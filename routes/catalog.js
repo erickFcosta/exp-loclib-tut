@@ -25,10 +25,10 @@ router.post('/book/:id/delete/', bookCtrl.book_delete_post);*/
 router.get('/authors', authorCtrl.author_list);
 router.get('/author/:id', authorCtrl.author_detail);
 // get and post author
-/*router.get('/author/create', authorCtrl.author_create_get);
+router.get('/author/create', authorCtrl.author_create_get);
 router.post('/author/create', authorCtrl.author_create_post);
 
-router.get('/author/:id/update', authorCtrl.author_update_get);
+/*router.get('/author/:id/update', authorCtrl.author_update_get);
 router.post('/author/:id/update', authorCtrl.author_update_post);
 
 router.get('/author/:id/delete', authorCtrl.author_delete_get);
@@ -53,6 +53,8 @@ router.get('/genre', genreCtrl.genre_list);
 //TODO: rota detalhes de genero precisa ser revista
 router.post('/genre/:id', genreCtrl.genre_detail);
 // get and post genre
+router.get('/genre/create', genreCtrl.genre_create_get);
+router.post('/genre/create', genreCtrl.genre_create_post);
 /*router.get('/genre/:id/update', genreCtrl.genre_update_get);
 router.post('/genre/:id/update', genreCtrl.genre_update_post);
 
